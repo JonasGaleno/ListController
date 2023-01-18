@@ -2,7 +2,7 @@
 ListController é uma aplicação web a qual podemos gerenciar listas ou itens de categorias cadastradas, além disso temos o controle de login, então as listas e categorias são cadastradas por usuários.
 
 # Big Game Survey 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/JonasGaleno/ListController/blob/main/LICENSE) 
 
 # Sobre o projeto
 
