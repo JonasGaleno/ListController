@@ -1,0 +1,189 @@
+
+body {
+    background-color: #EbEbEb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    height: 122px;
+    background-color: #000;
+}
+
+.logout-link {
+    color: #FFF;
+    margin-right: 5px;
+}
+
+.logout-link:hover {
+    text-decoration: none;
+    color: #a9a9a9;
+}
+
+.material-icons.logout-icon{
+    color: #FFF;
+}
+
+.footer {
+    height: 150px;
+}
+
+/* LOGIN  and SIGNUP */
+
+.container-form {
+    margin-top: 10%;
+    background-color: #FFF;
+    width: 385px;
+    height: 430px;
+    border-radius: 10px;
+    padding: 16px 32px;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.title-form {
+    text-align: center;
+    font-size: 20px;
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-form {
+    width: 40%;
+    margin: 4px 0px;
+}
+
+.google-icon {
+    width: 16px;
+    margin-right: 5px;
+}
+
+/* HOME */
+
+.home-page {
+    margin-top: 223px;
+    text-align: center;
+}
+
+.material-icons.md-36.add{
+    color: #37DB0E;
+    font-size: 36px; 
+}
+
+.container-categories{
+    width: 900px;
+}
+
+.category{
+    height: 192px;
+    margin: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.category:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.03); 
+}
+
+.category-name {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    margin-top: 76px;
+}
+
+/*CATEGORY ITEMS*/
+
+.category-items {
+    margin-top: 74px;
+}
+
+.delete-category {
+    text-align: right;
+}
+
+.material-icons.delete {
+    color: #C60707;
+}
+
+.card-name {
+    height: 192px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.edit-name {
+    display: flex;
+    padding: 65px;
+    justify-content: center;
+}
+
+.material-icons.md-36.edit {
+    color: #000;
+    font-size: 36px;
+    padding-top: 10px;
+}
+
+.name-category {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.action-buttons {
+    margin-top: 60px;
+}
+
+.container-items {
+    margin-top: 3px;
+}
+
+.item {
+    height: 37px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FFF;
+    margin-top: 8px;
+    padding: 6px 6px;
+}
+
+.material-icons.edit-item {
+    color: #000;
+    margin-right: 8px;
+}
+
+.item-name {
+    font-size: 20px;
+}
+
+.material-icons.check-item {
+    color: #02941A;
+}
+
+/*FINISHED ITEMS*/
+
+.finished-items {
+    margin-top: 74px;
+}
+
+.material-icons.md-36.back {
+    color: #000;
+    font-size: 36px;
+}
+
+.container-finished-items {
+    margin-top: 11px;
+}
+
+.material-icons.remove-finished-item {
+    color: #C60707;
+}
