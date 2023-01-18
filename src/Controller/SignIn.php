@@ -4,6 +4,7 @@ namespace Jonas\ListController\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Jonas\ListController\Entity\User;
+use Jonas\ListController\Helper\AlertMessage;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -11,6 +12,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class SignIn implements RequestHandlerInterface
 {
+    use AlertMessage;
+
     private $userRepository;
 
     public function __construct(EntityManagerInterface $entityManager)
@@ -25,7 +28,7 @@ class SignIn implements RequestHandlerInterface
         $email = filter_var($post['email'], FILTER_VALIDATE_EMAIL);
 
         if (is_null($email) || $email === false) {
-            $message = 'O email digitado está inválido.';
+            $this->setMessage("error", "O email digitado está inválido.");
 
             return new Response(400, ['Location' => '/login']);
         }
@@ -37,7 +40,7 @@ class SignIn implements RequestHandlerInterface
         ]);
 
         if (is_null($user) || !$user->verifyPassword($password)) {
-            $message = 'E-mail ou senha incorretos.';
+            $this->setMessage("error", "E-mail ou senha incorretos.");
 
             return new Response(400, ['Location' => '/login']);
         }
