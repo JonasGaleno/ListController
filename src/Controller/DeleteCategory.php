@@ -4,6 +4,7 @@ namespace Jonas\ListController\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Jonas\ListController\Entity\Category;
+use Jonas\ListController\Helper\AlertMessage;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -11,6 +12,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class DeleteCategory implements RequestHandlerInterface
 {
+    use AlertMessage;
+
     private $entityManager;
 
     public function __construct(EntityManagerInterface $entityManager)
@@ -28,6 +31,8 @@ class DeleteCategory implements RequestHandlerInterface
 
         $this->entityManager->remove($category);
         $this->entityManager->flush();
+
+        $this->setMessage("success", "Categoria removida!");
         
         return new Response(200, ['Location' => '/home']);
     }

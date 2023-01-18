@@ -2,7 +2,7 @@
 
     <div class="container category-items">
         <div class="delete-category">
-            <a href="/delete-category?id=<?= $category->getId(); ?>" class="remove-category">
+            <a href="/delete-category?id=<?= $category->getId(); ?>" class="remove-category" id="removeCategory">
                 <span class="material-icons delete">delete</span>
             </a>
         </div>
@@ -20,7 +20,7 @@
             <a href="#" class="add-list" data-toggle="modal" data-target="#newItemModal">
                 <span class="material-icons md-36 add">add_circle</span>
             </a>
-            <a href="/finished-items" class="btn btn-primary">Finalizados</a>
+            <a href="/finished-items?id=<?= $category->getId(); ?>" class="btn btn-primary">Finalizados</a>
         </div>
 
         <div class="container-items">
@@ -40,17 +40,17 @@
                             <span class="item-name"><?= $item->getDescription(); ?></span>
                         </div>
                         <div class="form-buttons">
-                            <a href="/delete-item?id=<?= $item->getId(); ?>" class="remove-item">
+                            <a href="/delete-item?id=<?= $item->getId(); ?>" class="remove-item" id="removeItem">
                                 <span class="material-icons delete">delete</span>
                             </a>
-                            <a href="/finish-item?id=<?= $item->getId(); ?>" class="finish-item">
+                            <a href="/finish-item?id=<?= $item->getId(); ?>" class="finish-item" id="finishItem">
                                 <span class="material-icons check-item">check_circle</span>
                             </a>
                         </div>
                     </div>
                 <?php endforeach; ?>
             <?php else : ?>
-                <div class="d-flex justify-content-center warning-text">
+                <div class="alert alert-info d-flex justify-content-center">
                     <h3>Não há itens</h3>
                 </div>
             <?php endif; ?>

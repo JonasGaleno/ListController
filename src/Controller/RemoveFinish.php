@@ -3,7 +3,6 @@
 namespace Jonas\ListController\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Jonas\ListController\Entity\Category;
 use Jonas\ListController\Entity\Item;
 use Jonas\ListController\Helper\AlertMessage;
 use Nyholm\Psr7\Response;
@@ -11,7 +10,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class NewItem implements RequestHandlerInterface
+class RemoveFinish implements RequestHandlerInterface
 {
     use AlertMessage;
 
@@ -21,25 +20,23 @@ class NewItem implements RequestHandlerInterface
     {
         $this->entityManager = $entityManager;
     }
-
+    
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $get = $request->getQueryParams();
-        $post = $request->getParsedBody();
 
-        $categoryId = $get['id'];
-        $itemDescription = $post['description'];
+        $itemId = $get['id'];
 
-        $category = $this->entityManager->find(Category::class, $categoryId);
+        $item = $this->entityManager->find(Item::class, $itemId);
 
-        $item = new Item($itemDescription);
-        $item->setCategory($category);
+        $item->status = 'PENDENTE';
 
-        $this->entityManager->persist($item);
+        $category = $item->getCategory();
+        
         $this->entityManager->flush();
 
-        $this->setMessage("success", "Item inserido!");
-
-        return new Response(201, ['Location' => '/category-items?id=' . $categoryId]);
+        $this->setMessage("success", "Item removido dos finalizados!");
+        
+        return new Response(201, ['Location' => '/finished-items?id=' . $category->getId()]);
     }
 }

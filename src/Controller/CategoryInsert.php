@@ -5,6 +5,7 @@ namespace Jonas\ListController\Controller;
 use Doctrine\ORM\EntityManagerInterface;
 use Jonas\ListController\Entity\Category;
 use Jonas\ListController\Entity\User;
+use Jonas\ListController\Helper\AlertMessage;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -12,6 +13,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class CategoryInsert implements RequestHandlerInterface
 {
+    use AlertMessage;
+
     private $entityManager;
 
     public function __construct(EntityManagerInterface $entityManager) {
@@ -26,7 +29,6 @@ class CategoryInsert implements RequestHandlerInterface
 
         $category = new Category($categoryName);
 
-        // trocar pelo usuário logado na sessão
         $userId = $_SESSION['user'];
 
         $user = $this->entityManager->getReference(User::class, $userId);
@@ -36,6 +38,8 @@ class CategoryInsert implements RequestHandlerInterface
         $this->entityManager->persist($category);
 
         $this->entityManager->flush($category);
+
+        $this->setMessage("success", "Categoria adicionada!");
 
         return new Response(302, ['Location' => '/home']);
     }

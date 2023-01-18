@@ -15,13 +15,9 @@ class EntityManagerCreator
             isDevMode: true,
         );
 
-        $connection = DriverManager::getConnection([
-            'dbname' => 'listcontroller',
-            'user' => 'root',
-            'password' => 'root',
-            'host' => 'localhost',
-            'driver' => 'pdo_mysql'
-        ], $config);
+        $connection = DriverManager::getConnection(
+            require __DIR__ . '../../../config/config.php', 
+            $config);
 
         return new EntityManager($connection, $config);
     }
