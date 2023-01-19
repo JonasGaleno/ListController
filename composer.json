@@ -9,7 +9,8 @@
         "psr/http-factory": "^1.0",
         "nyholm/psr7-server": "^1.0",
         "psr/http-server-handler": "^1.0",
-        "php-di/php-di": "*"
+        "php-di/php-di": "*",
+        "vlucas/phpdotenv": "^5.5"
     },
     "autoload": {
         "psr-4": {

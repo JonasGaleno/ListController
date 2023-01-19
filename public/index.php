@@ -1,5 +1,6 @@
 <?php
 
+use Dotenv\Dotenv;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7Server\ServerRequestCreator;
 
@@ -13,6 +14,9 @@ if (!array_key_exists($caminho, $rotas)) {
     http_response_code(404);
     exit();
 }
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 session_start();
 

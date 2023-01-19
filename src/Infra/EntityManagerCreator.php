@@ -15,9 +15,13 @@ class EntityManagerCreator
             isDevMode: true,
         );
 
-        $connection = DriverManager::getConnection(
-            require __DIR__ . '../../../config/config.php', 
-            $config);
+        $connection = DriverManager::getConnection([
+                'dbname' => $_ENV['DATABASE_NAME'],
+                'user' => $_ENV['DATABASE_USER'],
+                'password' => $_ENV['DATABASE_PASSWORD'],
+                'host' => $_ENV['DATABASE_HOST'],
+                'driver' => 'pdo_mysql'
+            ], $config);
 
         return new EntityManager($connection, $config);
     }
