@@ -6,14 +6,23 @@
 
 //link da aplicaç
 
-ListController é uma aplicação web a qual podemos gerenciar listas ou itens de categorias cadastradas, além disso temos o controle de login, então as listas e categorias são cadastradas por usuários.
+ListController é um projeto com mais foco no back end e nas funcionalidades, ele surgiu com o objetivo de melhorar o desenvolvimento com a linguagem PHP, dessa forma foram utilizados algumas das melhores práticas assim como ferramentas.
 
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+A aplicação web serve para gerenciar listas ou itens de categorias cadastradas, em resumo cadastramos algumas categorias e dentro das categorias montamos os itens relacionados. Além disso temos o controle de login, então as listas e categorias são separadas por usuários.
 
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
+## Funcionalidades
+- Sistema de login e cadastro
+- Cadastro, edição e exclusão de categorias
+- Cadastro, edição e exclusão de itens/listas
+- Consulta dos itens de cada categoria
+- Marcar item como finalizado
+- Consulta de itens finalizados por categoria
+- Logout do sistema
 
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
+## Interface do usuario
+Sitemap: https://www.figma.com/file/jZdJG1IaftKXqFOUIGDhz6/ListController-Sitemap?node-id=0%3A1&t=aJKBdVYPFMYbVeVl-1
+Prototipação: https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=0%3A1&t=RrruoDjQs80PQdoF-1
+
 
 ## Layout web
 ![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
@@ -23,59 +32,58 @@ A aplicação consiste em uma pesquisa de preferência de games, onde os dados s
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
 
+## Diagrama de classe
+![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+
 # Tecnologias utilizadas
 ## Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
+- PHP
+- Composer
+- Doctrine
+- MySQL
+- PSR-7 http-response
+- PSR-15 http-server-handle
+- PSR-11 Container interface
+- phpdotenv
 ## Front end
-- HTML / CSS / JS / TypeScript
-- ReactJS
-- React Native
-- Apex Charts
-- Expo
-## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
+- HTML / CSS / JS
+- Bootstrap
+- SweetAlert
+- GoogleFonts
 
 # Como executar o projeto
 
 ## Back end
-Pré-requisitos: Java 11
+Pré-requisitos: Apache, MySQL, PHP-8 e Composer
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone https://github.com/JonasGaleno/ListController.git
 
-# entrar na pasta do projeto back end
-cd backend
+# entrar na pasta do projeto
+cd ListController
 
-# executar o projeto
-./mvnw spring-boot:run
-```
+# instalar as depêndencias
+composer install
 
-## Front end web
-Pré-requisitos: npm / yarn
+# configurar as variáveis de ambiente
+public/.env
 
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+DATABASE_NAME=
+DATABASE_USER=
+DATABASE_PASSWORD=
+DATABASE_HOST=
+DATABASE_PORT=
 
-# entrar na pasta do projeto front end web
-cd front-web
+# criação do banco de dados e das tabelas no terminal
+php bin/doctrine.php orm:schema-tool:create
 
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
+# subir servidor do php
+php -S localhost:8080 -t public
 ```
 
 # Autor
 
-Wellington Mazoni de Andrade
+Jonas Galeno da Silva
 
-https://www.linkedin.com/in/wmazoni
-
+https://www.linkedin.com/in/jonas-galeno-96604520a/
