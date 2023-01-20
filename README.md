@@ -4,8 +4,6 @@
 
 # Sobre o projeto
 
-//link da aplicaç
-
 ListController é um projeto com mais foco no back end e nas funcionalidades, ele surgiu com o objetivo de melhorar o desenvolvimento web com a linguagem PHP, dessa forma foram utilizadas algumas das melhores práticas.
 
 A aplicação web serve para gerenciar listas ou itens de categorias diversas, em resumo cadastramos algumas categorias e dentro delas montamos itens relacionados. Além disso, temos o controle de login, então as listas e categorias são separadas por usuários.
@@ -20,8 +18,12 @@ A aplicação web serve para gerenciar listas ou itens de categorias diversas, e
 - Logout do sistema
 
 ## Interface do usuario
-Sitemap: https://www.figma.com/file/jZdJG1IaftKXqFOUIGDhz6/ListController-Sitemap?node-id=0%3A1&t=aJKBdVYPFMYbVeVl-1
-Prototipação: https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=0%3A1&t=RrruoDjQs80PQdoF-1
+- Sitemap
+![sitemap](https://github.com/JonasGaleno/ListController/tree/main/public/Assets/sitemap.png)
+
+- Prototipação: 
+https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=0%3A1&t=RrruoDjQs80PQdoF-1
+![prototipo](https://github.com/JonasGaleno/ListController/tree/main/public/Assets/prototipo.png)
 
 
 ## Layout web
