@@ -23,13 +23,15 @@ A aplicação web serve para gerenciar listas ou itens de categorias diversas, e
 
 - Prototipação: 
 https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=0%3A1&t=RrruoDjQs80PQdoF-1
-![prototipo](https://github.com/JonasGaleno/ListController/tree/main/public/Assets/prototipo.png)
+![prototipo](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/prototipo.png?raw=true)
 
 
 ## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
+![login](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/login.png?raw=true)
 
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+![home](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+
+![list](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
