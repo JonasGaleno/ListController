@@ -29,15 +29,15 @@ https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=
 ## Layout web
 ![login](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/login.png?raw=true)
 
-![home](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+![home](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/home.png?raw=true)
 
-![list](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+![list](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/list.png?raw=true)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/modelo.png?raw=true)
 
 ## Diagrama de classe
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Diagrama UML](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/uml.png?raw=true)
 
 # Tecnologias utilizadas
 ## Back end
