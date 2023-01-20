@@ -27,10 +27,13 @@ https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=
 
 
 ## Layout web
+- Login
 ![login](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/login.png?raw=true)
 
+- Tela inicial
 ![home](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/home.png?raw=true)
 
+- Categoria e itens
 ![list](https://github.com/JonasGaleno/ListController/blob/main/public/Assets/list.png?raw=true)
 
 ## Modelo conceitual
