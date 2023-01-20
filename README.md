@@ -17,7 +17,7 @@ A aplicação web serve para gerenciar listas ou itens de categorias diversas, e
 - Consulta de itens finalizados por categoria
 - Logout do sistema
 
-## Interface do usuario
+## Design
 - Sitemap
 ![sitemap](https://raw.githubusercontent.com/JonasGaleno/ListController/main/public/Assets/sitemap.png)
 
