@@ -19,7 +19,7 @@ A aplicação web serve para gerenciar listas ou itens de categorias diversas, e
 
 ## Interface do usuario
 - Sitemap
-![sitemap](https://github.com/JonasGaleno/ListController/tree/main/public/Assets/sitemap.png)
+![sitemap](https://raw.githubusercontent.com/JonasGaleno/ListController/main/public/Assets/sitemap.png)
 
 - Prototipação: 
 https://www.figma.com/file/QSv62hE0rlHCdXw9hpLA2n/ListController-Design?node-id=0%3A1&t=RrruoDjQs80PQdoF-1
