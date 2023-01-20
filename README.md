@@ -6,7 +6,7 @@
 
 //link da aplicaç
 
-ListController é um projeto com mais foco no back end e nas funcionalidades, ele surgiu com o objetivo de melhorar o desenvolvimento com a linguagem PHP, dessa forma foram utilizados algumas das melhores práticas assim como ferramentas.
+ListController é um projeto com mais foco no back end e nas funcionalidades, ele surgiu com o objetivo de melhorar o desenvolvimento web com a linguagem PHP, dessa forma foram utilizados algumas das melhores práticas assim como ferramentas.
 
 A aplicação web serve para gerenciar listas ou itens de categorias cadastradas, em resumo cadastramos algumas categorias e dentro das categorias montamos os itens relacionados. Além disso temos o controle de login, então as listas e categorias são separadas por usuários.
 
